@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Igloo Model Portal</title>
+    <meta
+      name="description"
+      content="Scan-friendly 3D model viewer pages for immersive museum and exhibition experiences."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body data-page="index">
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Igloo 3D Model Portal</p>
+        <h1>Scan a code. Open a model. Step into the scene.</h1>
+        <p class="lede">
+          This lightweight viewer is built for QR-triggered model viewing on mobile, with
+          browser controls for every phone and AR-ready support where the device allows it.
+        </p>
+        <div class="hero-note">
+          <span>Best on phone</span>
+          <span>Interactive 3D for all</span>
+          <span>AR-ready path included</span>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="Available models" id="model-grid"></section>
+
+      <section class="footer-panel">
+        <h2>How this works in the museum</h2>
+        <p>
+          Place a QR code near each exhibit point in your 360 museum. A visitor scans the
+          code, lands on a dedicated viewer page, rotates the model in-browser, and can use
+          the AR option on supported devices.
+        </p>
+        <p class="footnote">
+          Note: Android devices are the most reliable for direct GLB-to-AR flows. iPhone
+          users will still get the web viewer, but full native Quick Look AR usually needs a
+          USDZ version of the same model.
+        </p>
+      </section>
+    </main>
+
+    <script src="./models.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

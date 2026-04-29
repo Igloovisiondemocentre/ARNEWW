@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Model Viewer</title>
+    <meta
+      name="description"
+      content="Mobile-friendly 3D model viewer with camera controls and AR-ready support."
+    >
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer-legacy.js"
+    ></script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body data-page="viewer">
+    <main class="viewer-shell">
+      <a class="back-link" href="./index.html">Back to models</a>
+
+      <section class="viewer-stage">
+        <div class="viewer-copy">
+          <p class="eyebrow" id="model-tag">Igloo immersive model</p>
+          <h1 id="model-title">Loading model...</h1>
+          <p class="lede" id="model-description">
+            Preparing the interactive viewer for this model.
+          </p>
+          <div class="viewer-meta" id="model-meta"></div>
+        </div>
+
+        <model-viewer
+          id="model-viewer"
+          camera-controls
+          touch-action="pan-y"
+          auto-rotate
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          shadow-intensity="1"
+          exposure="1"
+          interaction-prompt="auto"
+          loading="eager"
+          environment-image="neutral"
+        >
+          <button class="ar-button" slot="ar-button">View in AR</button>
+        </model-viewer>
+      </section>
+
+      <section class="footer-panel compact">
+        <h2>Tips for visitors</h2>
+        <p>
+          Drag to rotate. Pinch to zoom. Use the AR button if your device supports placing
+          the model into the space around you.
+        </p>
+        <p class="footnote" id="ar-footnote">
+          AR support varies by device. Android works best with GLB. iPhone may stay in the
+          web viewer unless a USDZ version is provided.
+        </p>
+        <p>
+          <a id="raw-model-link" href="#">Open raw model file</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="./models.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

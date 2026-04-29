@@ -1,0 +1,335 @@
+:root {
+  --bg: #08111b;
+  --bg-soft: #0e1a27;
+  --panel: rgba(11, 22, 34, 0.76);
+  --line: rgba(158, 191, 222, 0.18);
+  --text: #f4f8fc;
+  --muted: #9db2c8;
+  --accent: #76e2d0;
+  --accent-strong: #8cf4e2;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+  --max: 1180px;
+  --radius: 28px;
+  --font-head: "Aptos Display", "Segoe UI", sans-serif;
+  --font-body: "Aptos", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(118, 226, 208, 0.14), transparent 32%),
+    radial-gradient(circle at top right, rgba(120, 154, 255, 0.14), transparent 28%),
+    linear-gradient(180deg, #071018 0%, #0a1320 50%, #08111b 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 78%);
+}
+
+a {
+  color: inherit;
+}
+
+.shell,
+.viewer-shell {
+  width: min(calc(100% - 2rem), var(--max));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero,
+.footer-panel,
+.viewer-stage {
+  position: relative;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.hero {
+  padding: clamp(2rem, 4vw, 4rem);
+}
+
+.hero::after,
+.viewer-stage::after {
+  position: absolute;
+  inset: auto -8% -28% auto;
+  width: min(42vw, 520px);
+  aspect-ratio: 1;
+  content: "";
+  background: radial-gradient(circle, rgba(118, 226, 208, 0.16), transparent 70%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+h1,
+h2,
+.card-title {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  max-width: 10ch;
+  font-size: clamp(2.7rem, 7vw, 5.8rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.lede,
+.footer-panel p,
+.card-copy,
+.viewer-meta,
+.footnote {
+  max-width: 64ch;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.lede {
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+}
+
+.hero-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-note span,
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #d8e5f1;
+  font-size: 0.92rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.model-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  min-height: 320px;
+}
+
+.card-art {
+  position: relative;
+  min-height: 168px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top, rgba(118, 226, 208, 0.24), transparent 35%),
+    linear-gradient(140deg, rgba(118, 226, 208, 0.1), rgba(120, 154, 255, 0.16)),
+    #102131;
+}
+
+.card-art::before,
+.card-art::after {
+  position: absolute;
+  content: "";
+}
+
+.card-art::before {
+  inset: 12% 18%;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transform: rotate(-12deg);
+}
+
+.card-art::after {
+  inset: auto 12% 14% auto;
+  width: 46%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28), transparent 70%);
+}
+
+.card-title {
+  font-size: 1.45rem;
+}
+
+.card-copy {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.button,
+.button-secondary,
+.back-link,
+.ar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.9rem 1.15rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.button,
+.ar-button {
+  border: 0;
+  background: var(--accent);
+  color: #07211f;
+}
+
+.button-secondary,
+.back-link {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.button:hover,
+.button-secondary:hover,
+.back-link:hover,
+.ar-button:hover {
+  transform: translateY(-1px);
+}
+
+.footer-panel {
+  padding: 1.5rem;
+}
+
+.footer-panel.compact {
+  margin-top: 1rem;
+}
+
+.footnote {
+  font-size: 0.94rem;
+}
+
+.viewer-shell {
+  min-height: 100svh;
+}
+
+.back-link {
+  margin-bottom: 1rem;
+}
+
+.viewer-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 1.2rem;
+  padding: 1rem;
+  align-items: stretch;
+}
+
+.viewer-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.1rem, 2vw, 2rem);
+}
+
+.viewer-copy h1 {
+  max-width: 14ch;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+}
+
+.viewer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+model-viewer {
+  width: 100%;
+  min-height: min(78svh, 720px);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top, rgba(118, 226, 208, 0.12), transparent 34%),
+    linear-gradient(180deg, #102030, #0a1320);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 920px) {
+  .viewer-stage {
+    grid-template-columns: 1fr;
+  }
+
+  model-viewer {
+    min-height: 58svh;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell,
+  .viewer-shell {
+    width: min(calc(100% - 1rem), var(--max));
+    padding: 1rem 0 1.5rem;
+  }
+
+  .hero,
+  .footer-panel {
+    border-radius: 22px;
+  }
+
+  h1 {
+    max-width: 12ch;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

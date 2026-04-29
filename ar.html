@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open in AR</title>
+    <meta
+      name="description"
+      content="Launch a 3D model directly into Android Scene Viewer AR when supported."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body data-page="ar">
+    <main class="viewer-shell">
+      <section class="hero">
+        <p class="eyebrow" id="ar-tag">Igloo AR launch</p>
+        <h1 id="ar-title">Preparing AR…</h1>
+        <p class="lede" id="ar-description">
+          On supported Android devices this will open directly into Scene Viewer AR. If that
+          is not available, you can continue into the browser-based 3D viewer.
+        </p>
+        <div class="card-actions">
+          <a class="button" id="ar-open-now" href="#">Open AR now</a>
+          <a class="button-secondary" id="ar-open-viewer" href="#">Open browser viewer</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./models.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
