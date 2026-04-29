@@ -1,0 +1,37 @@
+[
+  {
+    "id": "neighbourhood-city-modular-lowpoly",
+    "title": "Neighbourhood City Modular Lowpoly",
+    "url": "https://igloovisiondemocentre.github.io/AR-/ar.html?model=neighbourhood-city-modular-lowpoly",
+    "viewerUrl": "https://igloovisiondemocentre.github.io/AR-/viewer.html?model=neighbourhood-city-modular-lowpoly",
+    "qr": "./qr/neighbourhood-city-modular-lowpoly.svg"
+  },
+  {
+    "id": "seoul-city-gameready-render",
+    "title": "Seoul City Game-Ready Render",
+    "url": "https://igloovisiondemocentre.github.io/AR-/ar.html?model=seoul-city-gameready-render",
+    "viewerUrl": "https://igloovisiondemocentre.github.io/AR-/viewer.html?model=seoul-city-gameready-render",
+    "qr": "./qr/seoul-city-gameready-render.svg"
+  },
+  {
+    "id": "city-scene",
+    "title": "City Scene",
+    "url": "https://igloovisiondemocentre.github.io/AR-/ar.html?model=city-scene",
+    "viewerUrl": "https://igloovisiondemocentre.github.io/AR-/viewer.html?model=city-scene",
+    "qr": "./qr/city-scene.svg"
+  },
+  {
+    "id": "la-street-art-alleyway",
+    "title": "LA Street Art Alleyway",
+    "url": "https://igloovisiondemocentre.github.io/AR-/ar.html?model=la-street-art-alleyway",
+    "viewerUrl": "https://igloovisiondemocentre.github.io/AR-/viewer.html?model=la-street-art-alleyway",
+    "qr": "./qr/la-street-art-alleyway.svg"
+  },
+  {
+    "id": "exterior-architecture",
+    "title": "Exterior Architecture",
+    "url": "https://igloovisiondemocentre.github.io/AR-/ar.html?model=exterior-architecture",
+    "viewerUrl": "https://igloovisiondemocentre.github.io/AR-/viewer.html?model=exterior-architecture",
+    "qr": "./qr/exterior-architecture.svg"
+  }
+]
